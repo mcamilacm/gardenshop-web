@@ -22,7 +22,7 @@ const Header = () => {
       <nav className={styles.nav}>
         <div className={styles.menuIconContainer}>
         <Image
-          src="/icons/menu.png"
+          src="/icons/menu.svg"
           alt="burguer_menu"
           width={32}
           height={32}
