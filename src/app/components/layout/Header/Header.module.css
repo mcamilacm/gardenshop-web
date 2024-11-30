@@ -4,8 +4,12 @@
   align-items: center;
   padding: 1.5rem 2rem;
   background-color: var(--color-background,#FBFDF9);
+  @media (min-width: 768px) {
+
 
 }
+}
+
 
 .logo_container
 {
