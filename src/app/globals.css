@@ -1,6 +1,7 @@
 :root {
   background-color: var(--color-background,#FBFDF9);
   --foreground: #171717;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +19,21 @@ body {
   padding: 0;
   background-color: var(--color-background,#FBFDF9);
   color: #333;
+ 
+}
+
+main{
+
+  max-width: 1440px; /* Define el ancho máximo para la página */
+  margin: 0 auto; /* Centra horizontalmente el contenido */
+
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  box-sizing: border-box;
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+
+ h1,h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600; 
 }
