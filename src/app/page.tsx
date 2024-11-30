@@ -3,6 +3,9 @@
 import { Poppins } from 'next/font/google';
 import Header from './components/layout/Header/Header';
 import Hero from "./home/Hero/Hero";
+import CategoryCards from "./home/CategoryCards/CategoryCards";
+import Footer from './components/layout/Footer/Footer';
+
 
 const poppins = Poppins({
   weight: ['300', '400', '600', '700'],
@@ -14,7 +17,9 @@ export default function Home() {
     <main className={poppins.className}>
       <Header></Header>
       <Hero></Hero>
-      <p>hola</p>
+      <CategoryCards></CategoryCards>
+      <Footer></Footer>
+     
     </main>
   )
 }
