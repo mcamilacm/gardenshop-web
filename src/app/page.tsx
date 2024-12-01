@@ -7,6 +7,8 @@ import CategoryCards from "./home/CategoryCards/CategoryCards";
 import Footer from './components/layout/Footer/Footer';
 
 
+
+
 const poppins = Poppins({
   weight: ['300', '400', '600', '700'],
   subsets: ['latin'],
@@ -18,6 +20,7 @@ export default function Home() {
       <Header></Header>
       <Hero></Hero>
       <CategoryCards></CategoryCards>
+  
       <Footer></Footer>
      
     </main>
