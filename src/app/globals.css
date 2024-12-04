@@ -1,0 +1,125 @@
+:root {
+  background-color: var(--color-background,#FBFDF9);
+  --foreground: #171717;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    background-color: var(--color-background,#FBFDF9);
+  }
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; 
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background,#FBFDF9);
+  color: #333;
+ 
+}
+
+main{
+
+  max-width: 1440px; /* Define el ancho máximo para la página */
+  margin: 0 auto; /* Centra horizontalmente el contenido */
+
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  box-sizing: border-box;
+}
+
+
+
+ h1,h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; 
+}
+
+.light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+
+.regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+}
+
+small {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
