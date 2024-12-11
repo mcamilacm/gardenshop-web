@@ -17,7 +17,7 @@ const RegisterForm = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target;  
     setFormData({
       ...formData,
       [name]: value,
