@@ -1,0 +1,25 @@
+.button{
+ width: Fixed (182px)px;
+height: Hug (53px)px;
+padding: 13px 40px 13px 40px;
+gap: 10px;
+border-radius: 8px 8px 8px 8px;
+opacity: 0px;
+background: var(--Primary-Primary-300, #789E1A);
+font-family: Poppins;
+font-size: 16px;
+font-weight: 600;
+line-height: 26.9px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color:var(--Neutral-Neutral-25, #F7F8FA);
+border: none;
+outline: none;
+
+
+}
+
+.button:hover{
+    background-color: #ABDD2C;
+}

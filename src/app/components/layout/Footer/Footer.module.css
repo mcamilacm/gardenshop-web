@@ -1,0 +1,46 @@
+.footer
+
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cursive_tittle {    
+    font-family: 'Allison';
+    font-style: oblique;
+    font-size: 2rem; /* 32px = 2rem */
+    font-weight: 600;
+    line-height: 3.75rem; /* 60px = 3.75rem */
+    letter-spacing: 0.5625rem; /* 9px = 0.5625rem */
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #419F5A;
+    padding-left: 0.5rem;
+}
