@@ -1,9 +1,7 @@
-//import Image from "next/image";
-//import styles from "./page.module.css";
 import Header from './components/layout/Header/Header';
-import Hero from "./home/Hero/Hero";
-import CategoryCards from "./home/CategoryCards/CategoryCards";
 import Footer from './components/layout/Footer/Footer';
+import CategoryCards from './Home/CategoryCards/CategoryCards';
+import Hero from './Home/Hero/Hero';
 
 
 export default function Home() {
