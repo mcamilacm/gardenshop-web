@@ -43,7 +43,7 @@ const Header = () => {
             <Link href="/contacto">Contáctanos</Link>
           </li>
           <li>
-            <Link href="/ingresar">Ingresar</Link>
+            <Link href="/login">Ingresar</Link>
           </li>
           <li>
           <Button href="/registrar">Registrarme</Button>
