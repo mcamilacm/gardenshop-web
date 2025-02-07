@@ -37,7 +37,7 @@ const Header = () => {
             <Link href="/nosotros">Nosotros</Link>
           </li>
           <li>
-            <Link href="/productos">Productos</Link>
+            <Link href="/categories">Productos</Link>
           </li>
           <li>
             <Link href="/contacto">Contáctanos</Link>
