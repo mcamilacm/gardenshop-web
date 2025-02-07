@@ -5,6 +5,7 @@
   width: 100%;
   position: relative;
   display: flex;
+  justify-content: space-between;
 
   @media (min-width: 768px) {
    
@@ -12,6 +13,7 @@
     max-width: 1440px;
     width: 100%;
     align-content: center;
+ 
 
   }
   
@@ -23,7 +25,13 @@
     flex-direction: column;
 justify-content: end;
 z-index: 1; 
-padding-left: 200pxs
+padding-left: 40px;
+
+@media (min-width: 768px) {
+
+    padding-left: 201px;
+
+}
 ;}
 
 .leaves_container{
@@ -45,6 +53,7 @@ padding-left: 200pxs
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: var(--Neutral-Neutral-700, rgba(54, 66, 89, 1));
+    padding-left: 8px;
 
     @media (min-width: 768px) {
    
@@ -117,7 +126,7 @@ color:rgba(65, 159, 90, 1);
 
     width: 212px;
 height: 434px;
-top: 0%;
+top: 18%;
 left: 0%;
 transform: rotate(0deg);
 
@@ -135,7 +144,11 @@ transform: rotate(0deg);
     position: absolute;
   
     left: 50%;
+    @media (min-width: 768px) {
 
+        display: none;
+
+    }
   
 
 }
@@ -143,6 +156,13 @@ transform: rotate(0deg);
 .leaf_two{
 position: absolute;
 left: 42%;
+
+@media (min-width: 768px) {
+
+    display: none;
+
+}
+
     
 
 
@@ -155,17 +175,17 @@ left: 42%;
     gap: 11px;
 }
 
-.title_hero_category
-{
-padding-left: 32px;
-}
 
 .main_image_hero{
 
-     
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    position: relative;
+
     @media (min-width: 768px) {
        display: flex;
- justify-content: end;
+
       }
       
 

@@ -1,6 +1,8 @@
 import Header from '../components/layout/Header/Header';
 
 import CategoryCardsHero from '../components/layout/CategoryCardsHero/page';
+import ProductGrid from '../components/layout/ProductGrid/ProductGrid';
+
 
 const Categories = () => {
   return (
@@ -16,7 +18,7 @@ altName ="Planting Flowers"
 
       
       ></CategoryCardsHero>
-
+   <ProductGrid /> 
 
     </div>
   );
