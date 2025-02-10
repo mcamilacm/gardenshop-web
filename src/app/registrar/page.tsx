@@ -1,10 +1,10 @@
 "use client";
 
-import InputField from "@/app/components/layout/InputField/InputField";
-import styles from "./register.module.css";
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
+import styles from "./register.module.css";
+import InputField from "components/layout/InputField/InputField";
 
 
 const RegisterPage = () => {

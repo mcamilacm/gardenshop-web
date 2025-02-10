@@ -1,0 +1,7 @@
+.container {
+    max-width: 1440px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+  }
+  
