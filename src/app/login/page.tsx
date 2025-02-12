@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 const LoginPage = () => {
 
   const router = useRouter();
-  
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -47,7 +47,12 @@ const LoginPage = () => {
       const result = await response.json();
       setMessage("Inicio de sesión exitoso. Redirigiendo...");
 
+      setTimeout(() => {
+        router.push("/"); 
+      }, 1000);
+
     }
+    
 
    catch (err: any) {
     setMessage(err.message);
