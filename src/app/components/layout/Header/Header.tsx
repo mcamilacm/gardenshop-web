@@ -41,7 +41,7 @@ const Header = () => {
           </li>
 
           {user ? (
-            // Si el usuario ha iniciado sesión, mostrar el menú desplegable
+           
             <li className={styles.userMenu}>
               <div
                 className={styles.userContainer}
@@ -55,10 +55,10 @@ const Header = () => {
                   className={styles.userAvatar}
                 />
                 <Image
-                  src="/icons/arrow-down.svg" // Icono de desplegable
+                  src="/icons/arrow-down.svg" 
                   alt="Desplegable"
-                  width={16}
-                  height={16}
+                  width={10}
+                  height={7.5}
                   className={styles.dropdownIcon}
                 />
               </div>
@@ -72,7 +72,7 @@ const Header = () => {
               )}
             </li>
           ) : (
-            // Si NO ha iniciado sesión, mostrar login y registro
+
             <>
               <li>
                 <Link href="/login">Ingresar</Link>
