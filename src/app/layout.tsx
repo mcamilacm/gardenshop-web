@@ -3,7 +3,7 @@ import { Poppins } from 'next/font/google';
 import "./globals.css";
 import Header from "components/layout/Header/Header";
 import GlobalContainer from "./components/layout/GlobalContainer/GlobalContainer";
-
+import { AuthProvider } from "../context/AuthContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,6 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <AuthProvider>
     <html lang="es">
       <body>
         <GlobalContainer>
@@ -29,5 +30,6 @@ export default function RootLayout({
         
       </body>
     </html>
+    </AuthProvider>
   );
 }
