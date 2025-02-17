@@ -15,7 +15,7 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
-
+  const [error, setError] = useState("");
   const [message, setMessage] = useState("")
 
   const handleChange =  (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,38 +26,40 @@ const LoginPage = () => {
     });
   };
 
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    try{
-
-      const response = await fetch("http://localhost:4000/login",{
+    setMessage(""); // Limpiar mensaje previo
+    setError("");
+  
+    try {
+      const response = await fetch("http://localhost:4000/login", {
         method: "POST",
-        headers:{"Content-Type": "application/json",},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-        email: formData.email,
-          password:formData.password,
+          email: formData.email,
+          password: formData.password,
         }),
       });
-
-      if(!response.ok){
-        throw new Error ("Credenciales incorrectas. Inténtalo de nuevo.")
-      }
-
+  
       const result = await response.json();
+      console.log("Respuesta del backend:", result); // Verificar respuesta
+  
+      if (!response.ok) {
+        throw new Error(result.message || "Error en la autenticación");
+      }
+  
+      localStorage.setItem("token", result.token);
       setMessage("Inicio de sesión exitoso. Redirigiendo...");
-
+  
       setTimeout(() => {
-        router.push("/"); 
+        router.push("/");
       }, 1000);
-
+    } catch (err: any) {
+      console.error("Error en la solicitud:", err.message);
+      setError(err.message); // Mostrar mensaje de error del backend
     }
-    
-
-   catch (err: any) {
-    setMessage(err.message);
-  }
-
+  
   };
 
   return (
@@ -118,6 +120,9 @@ const LoginPage = () => {
             ></InputField>
 
             <p className={styles.green_text}>¿Olvido su contraseña?</p>
+
+            {error && <p className={styles.errorMessage}>{error}</p>}
+{message && <p className={styles.successMessage}>{message}</p>}
 
             <button type="submit" className={styles.submitButton}>
               Iniciar sesión
