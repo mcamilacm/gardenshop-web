@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
-import Header from "components/layout/Header/Header";
+
 import GlobalContainer from "./components/layout/GlobalContainer/GlobalContainer";
 import { AuthProvider } from "../context/AuthContext";
 
