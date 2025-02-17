@@ -4,12 +4,15 @@ import styles from "./login.module.css";
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
-import InputField from "components/layout/InputField/InputField";
+import InputField from "@/app/components/layout/InputField/InputField";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext"; 
+
 
 const LoginPage = () => {
 
   const router = useRouter();
+  const { login } = useAuth();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -50,6 +53,7 @@ const LoginPage = () => {
       }
   
       localStorage.setItem("token", result.token);
+      login({ email: formData.email, name: "Margarita Rosales" });
       setMessage("Inicio de sesión exitoso. Redirigiendo...");
   
       setTimeout(() => {
