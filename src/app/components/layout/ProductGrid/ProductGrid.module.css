@@ -37,3 +37,21 @@
     margin-top: 8px;
   }
   
+  .favoriteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+  
+    top: 10px;
+    right: 10px;
+  }
+  
+  .favoriteButton img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .favoriteButton img:hover {
+    transform: scale(1.1);
+  }

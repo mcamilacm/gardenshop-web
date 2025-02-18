@@ -30,15 +30,11 @@ const Header = () => {
           <li>
             <Link href="/">Inicio</Link>
           </li>
-          <li>
-            <Link href="/nosotros">Nosotros</Link>
-          </li>
+        
           <li>
             <Link href="/categories">Productos</Link>
           </li>
-          <li>
-            <Link href="/contacto">Contáctanos</Link>
-          </li>
+        
 
           {user ? (
            

@@ -32,7 +32,7 @@ const LoginPage = () => {
   
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setMessage(""); // Limpiar mensaje previo
+    setMessage(""); 
     setError("");
   
     try {
@@ -46,26 +46,24 @@ const LoginPage = () => {
       });
   
       const result = await response.json();
-      console.log("Respuesta del backend:", result); // Verificar respuesta
+      console.log("Respuesta del backend:", result); 
   
       if (!response.ok) {
         throw new Error(result.message || "Error en la autenticación");
       }
   
       localStorage.setItem("token", result.token);
-      login({ email: formData.email, name: "Margarita Rosales" });
-      setMessage("Inicio de sesión exitoso. Redirigiendo...");
+      login({ userId: result.user.userId, email: result.user.email, name: result.user.name });
   
+      setMessage("Inicio de sesión exitoso. Redirigiendo...");
       setTimeout(() => {
         router.push("/");
       }, 1000);
     } catch (err: any) {
       console.error("Error en la solicitud:", err.message);
-      setError(err.message); // Mostrar mensaje de error del backend
+      setError(err.message);
     }
-  
   };
-
   return (
     <div className={styles.full_container_login}>
       <div className={styles.left_container_login}>
