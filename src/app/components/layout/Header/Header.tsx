@@ -54,19 +54,13 @@ const Header = () => {
                   height={40}
                   className={styles.userAvatar}
                 />
-                <Image
-                  src="/icons/arrow-down.svg" 
-                  alt="Desplegable"
-                  width={10}
-                  height={7.5}
-                  className={styles.dropdownIcon}
-                />
+             
               </div>
 
               {dropdownOpen && (
                 <div className={styles.dropdownMenu}>
                   <Link href="/favoritos">❤️ Mis Favoritos</Link>
-                  <Link href="/perfil">⚙️ Configurar Perfil</Link>
+             
                   <button onClick={logout}>🚪 Cerrar Sesión</button>
                 </div>
               )}
