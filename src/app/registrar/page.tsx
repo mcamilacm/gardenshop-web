@@ -102,13 +102,14 @@ const RegisterPage = () => {
         </div>
 
         <div className={styles.logo_title_login}>
-          <Image
+        <Link href="/">          <Image
             src="/img/big_logo.svg"
             alt="vivero_pasoancho_logo"
             width={296}
             height={169}
             className={styles.logo_form}
           />
+          </Link>
           <p className={styles.login}>Registro</p>
         </div>
 
