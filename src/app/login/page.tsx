@@ -1,12 +1,12 @@
 "use client";
 
+import React, { useState } from "react";
 import styles from "./login.module.css";
 import Image from "next/image";
-import React, { useState } from "react";
 import Link from "next/link";
-import InputField from "@/app/components/layout/InputField/InputField";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext"; 
+import InputField from "../components/InputField/InputField";
 
 
 const LoginPage = () => {
@@ -155,7 +155,7 @@ const LoginPage = () => {
                 <p className={styles.text_google_microsoft}>Microsoft</p>
               </div>
             </div>
-            <Link href="/registrar">
+            <Link href="/register">
               <p className={styles.new_account}>
                 ¿No tienes una cuenta aún?{" "}
                 <span className={styles.green_text}>Registrate aquí.</span>

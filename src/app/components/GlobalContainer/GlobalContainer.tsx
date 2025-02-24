@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import styles from "./GlobalContainer.module.css";
+import { usePathname } from "next/navigation";
 
 interface GlobalContainerProps {
   children: React.ReactNode;

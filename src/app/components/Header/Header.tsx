@@ -55,7 +55,7 @@ const Header = () => {
 
               {dropdownOpen && (
                 <div className={styles.dropdownMenu}>
-                  <Link href="/favoritos">❤️ Mis Favoritos</Link>
+                  <Link href="/favorites">❤️ Mis Favoritos</Link>
              
                   <button onClick={logout}>🚪 Cerrar Sesión</button>
                 </div>
@@ -68,7 +68,7 @@ const Header = () => {
                 <Link href="/login">Ingresar</Link>
               </li>
               <li>
-                <Button href="/registrar">Registrarme</Button>
+                <Button href="/register">Registrarme</Button>
               </li>
             </>
           )}
