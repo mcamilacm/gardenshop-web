@@ -1,57 +1,111 @@
+
+
+.favorites_user_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userAvatar {
+  width: 162px;
+  height: 162px;
+}
+
+.firstname{
+
+  font-family: Poppins;
+font-weight: 600;
+font-size: 24px;
+line-height: 30px;
+letter-spacing: 0px;
+margin-top: 31px;
+margin-bottom: 9px;
+
+@media (min-width: 1440px) {
+  font-size: 40px;
+}
+
+
+}
+
+.email{
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0px;
+  margin-bottom: 24px;
+
+  @media (min-width: 1440px) {
+   
+
+  }
+  
+}
+
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
-    gap: 16px;
-    padding: 16px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(194px, 2fr));
+  gap: 10px;
+  padding: 16px;
+
+  @media (min-width: 744px) {
+
+    grid-template-columns: repeat(auto-fit, minmax(310px, 2fr));
+
   
-  .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  }  }
   
-  .image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 8px 0;
-  }
-  
-  .description {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #27ae60;
-    margin-top: 8px;
-  }
-  
-  .favoriteButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-  
-    top: 10px;
-    right: 10px;
-  }
-  
-  .favoriteButton img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .favoriteButton img:hover {
-    transform: scale(1.1);
-  }
+
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin-top: 8px;
+}
+
+.favoriteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  top: 10px;
+  right: 10px;
+}
+
+.favoriteButton img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.favoriteButton img:hover {
+  transform: scale(1.1);
+}
