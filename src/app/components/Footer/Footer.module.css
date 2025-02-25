@@ -1,46 +1,112 @@
-.footer
+.footer {
+  background: rgba(251, 253, 249, 1);
+  position: relative;
 
-{
-    display: flex;
-    flex-direction: row;
+
 }
 
+.titles_footer
+{
+    @media (min-width: 1440px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
 
+.footer_title {
+  position: relative;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(53, 130, 74, 1);
+  padding: 64px 19px 0px 5px;
+  z-index: 1;
 
+  @media (min-width: 744px) {
+    font-size: 70px;
+    line-height: 80px;
+    padding: 66px 114px 0px 113px;
+  }
 
+  @media (min-width: 1440px) {
+    font-size: 74px;
 
+   
 
+  }
+}
 
+.cursive_title_footer {
+  position: relative;
+  font-family: "Allison";
+  font-style: oblique;
+  font-weight: 500;
+  font-size: 30px;
 
+  letter-spacing: 2px;
+  text-align: center;
+  color: #419f5a;
+  z-index: 1;
 
+  @media (min-width: 744px) {
+    margin-bottom: -60px;
+  }
 
+  @media (min-width: 1440px) {
+    font-size: 74px;
 
+  }
+}
 
+.footer_image {
+  position: relative;
+  width: 347px;
+  height: 287px;
+  margin-bottom: -7px;
 
+  @media (min-width: 1440px) {
+    width: 628px;
+    height: 519px;
+    margin-bottom: -2px;
+  }
+}
 
+.leaf_group_footer {
+  position: absolute;
+  width: 97px;
+  height: 199px;
+  transform: scaleX(-1);
+  top: 5%;
+  right: 1%;
 
+  @media (min-width: 744px) {
+    width: 157px;
+    height: 322px;
+    top: 20%;
+  }
 
+  @media (min-width: 1440px) {
 
+  
+  }
+}
 
+.green_zone_footer {
+    display: block;
+    width: 100%;
 
+ height: 124px;
+  background: var(--Success-Success-700, rgba(28, 51, 41, 1));
+}
 
+.titles_img_footer{
 
-
-
-
-
-
-
-.cursive_tittle {    
-    font-family: 'Allison';
-    font-style: oblique;
-    font-size: 2rem; /* 32px = 2rem */
-    font-weight: 600;
-    line-height: 3.75rem; /* 60px = 3.75rem */
-    letter-spacing: 0.5625rem; /* 9px = 0.5625rem */
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #419F5A;
-    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: row-reverse;
 }
