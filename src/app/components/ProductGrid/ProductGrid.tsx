@@ -26,20 +26,20 @@ const ProductGrid = () => {
 
     fetchProducts();
   }, []);
-
+  
   useEffect(() => {
     if (user) {
       fetch(`http://localhost:4000/favorites?userId=${user.userId}`)
         .then((res) => res.json())
         .then((data) => {
-          setFavorites(Array.isArray(data) ? data : []);
+          console.log("📌 Favoritos obtenidos en ProductGrid:", data);
+          setFavorites(Array.isArray(data) ? data.map((fav) => fav.product_id) : []);
         })
         .catch(() => {
           setFavorites([]);
         });
     }
-  }, [user]);
-
+  }, [user, favorites]);
   const toggleFavorite = async (productId: number) => {
     if (!user) {
       alert("Inicia sesión para guardar favoritos");
@@ -57,6 +57,9 @@ const ProductGrid = () => {
         method: "DELETE",
       });
       setFavorites(favorites.filter((fav) => fav !== productId));
+
+
+
     } else {
       const response = await fetch("http://localhost:4000/favorites", {
         method: "POST",
