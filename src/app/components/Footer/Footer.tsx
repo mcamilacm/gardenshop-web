@@ -16,7 +16,7 @@ const Footer = () => {
     <p className={styles.cursive_title_footer}>a florecer tu vida.</p>
     
     </div>   <Image
-            src="/img/footer_image.svg"
+            src="/img/footer_image2.svg"
             
         
             alt="planting_footer"
