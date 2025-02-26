@@ -107,6 +107,12 @@
 
 .titles_img_footer{
 
+
+  @media (min-width: 1440px) {
     display: flex;
     flex-direction: row-reverse;
+  
+  }
+
+   
 }
