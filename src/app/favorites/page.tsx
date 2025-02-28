@@ -16,7 +16,7 @@ const Favorites: React.FC = () => {
     const fetchFavorites = async () => {
       try {
         console.log("🔍 Haciendo petición de favoritos...");
-        const response = await fetch(`http://localhost:4000/favorites?userId=${user.userId}`);
+        const response = await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites?userId=${user.userId}`);
         if (!response.ok) throw new Error("❌ Error al obtener favoritos");
 
         const data = await response.json();
@@ -37,7 +37,7 @@ const Favorites: React.FC = () => {
     if (!user) return;
 
     try {
-      const response = await fetch(`http://localhost:4000/favorites/${productId}?userId=${user.userId}`, {
+      const response = await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites/${productId}?userId=${user.userId}`, {
         method: "DELETE",
       });
 

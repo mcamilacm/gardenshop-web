@@ -13,7 +13,7 @@ const ProductGrid = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:4000/products");
+        const response = await fetch("https://garden-shop-backend-b3uo.onrender.com/products");
         if (!response.ok) {
           throw new Error("Error al obtener productos");
         }
@@ -29,7 +29,7 @@ const ProductGrid = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:4000/favorites?userId=${user.userId}`)
+      fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites?userId=${user.userId}`)
         .then((res) => res.json())
         .then((data) => {
           setFavorites(Array.isArray(data) ? data : []);
@@ -53,12 +53,12 @@ const ProductGrid = () => {
     const isFavorite = favorites.includes(productId);
 
     if (isFavorite) {
-      await fetch(`http://localhost:4000/favorites/${productId}?userId=${user.userId}`, { 
+      await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites/${productId}?userId=${user.userId}`, {
         method: "DELETE",
       });
       setFavorites(favorites.filter((fav) => fav !== productId));
     } else {
-      const response = await fetch("http://localhost:4000/favorites", {
+      const response = await fetch("https://garden-shop-backend-b3uo.onrender.com/favorites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId: user.userId, productId }),
