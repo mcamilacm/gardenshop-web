@@ -164,12 +164,11 @@ justify-content: center;
 .submitButton
 {
    width: 100%;
-    height: Hug (53px)px;
+    height: 53px;
     padding: 13px 40px 13px 40px;
     gap: 10px;
     border-radius: 8px 8px 8px 8px;
-    opacity: 0px;
-    background: var(--Primary-Primary-300, #789E1A);
+    background:  #789E1A;
     font-family: Poppins;
     font-size: 16px;
     font-weight: 600;
