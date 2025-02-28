@@ -31,7 +31,7 @@ const Hero = () => {
       </div>
       <div className={styles.main_image}>
         <Image
-          src="/img/watering.svg"
+          src="/img/watering2.svg"
           alt="women_watering_flower"
           width={968}
           height={853}

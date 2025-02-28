@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 
 const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   const pathname = usePathname();
-  const authPathNames = pathname === "/login" || pathname === "/registrar";
+  const authPathNames = pathname === "/login" || pathname === "/register";
   return authPathNames ? (
     <>{children}</>
   ) : (
