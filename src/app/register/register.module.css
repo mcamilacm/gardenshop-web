@@ -179,6 +179,7 @@ justify-content: center;
     color:var(--Neutral-Neutral-25, #F7F8FA);
     border: none;
     outline: none;
+    margin-top: 20px;
 }
 
 .submitButton:hover{
