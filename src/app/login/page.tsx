@@ -89,6 +89,7 @@ const LoginPage = () => {
         </div>
 
         <div className={styles.logo_title_login}>
+        <Link href="/">   
           <Image
             src="/img/big_logo.svg"
             alt="vivero_pasoancho_logo"
@@ -96,6 +97,7 @@ const LoginPage = () => {
             height={169}
             className={styles.logo_form}
           />
+          </Link>
           <p className={styles.login}>Iniciar sesión</p>
         </div>
 
