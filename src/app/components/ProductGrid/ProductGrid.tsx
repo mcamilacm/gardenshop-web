@@ -39,36 +39,63 @@ const ProductGrid = () => {
         });
     }
   }, [user]);
-
   const toggleFavorite = async (productId: number) => {
     if (!user) {
       alert("Inicia sesión para guardar favoritos");
       return;
     }
-
+  
     if (!user.userId) {
       return;
     }
-
+  
+    const token = localStorage.getItem("token");
+  
+    if (!token) {
+      alert("⚠ No hay token de autenticación, inicia sesión de nuevo");
+      return;
+    }
+  
     const isFavorite = favorites.includes(productId);
-
+  
     if (isFavorite) {
-      await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites/${productId}?userId=${user.userId}`, {
+      await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites/${productId}`, {
         method: "DELETE",
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
       });
+  
       setFavorites(favorites.filter((fav) => fav !== productId));
+      console.log("✅ Producto eliminado de favoritos");
+  
     } else {
+      // ❌ Evitar que un producto ya en favoritos se agregue de nuevo
+      if (favorites.includes(productId)) {
+        console.log("⚠ Este producto ya está en favoritos");
+        return;
+      }
+  
       const response = await fetch("https://garden-shop-backend-b3uo.onrender.com/favorites", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ userId: user.userId, productId }),
       });
-
+  
+      if (!response.ok) {
+        console.error("❌ Error al agregar a favoritos");
+        return;
+      }
+  
       const result = await response.json();
-      setFavorites([...favorites, productId]);
+      setFavorites([...favorites, productId]); // ✅ Se actualiza la lista local de favoritos
+      console.log("✅ Producto añadido a favoritos");
     }
   };
-
   if (error) {
     return <div>Error: {error}</div>;
   }

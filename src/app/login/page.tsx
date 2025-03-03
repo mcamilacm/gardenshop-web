@@ -53,7 +53,7 @@ const LoginPage = () => {
       }
   
       localStorage.setItem("token", result.token);
-      login({ userId: result.user.userId, email: result.user.email, name: result.user.name });
+      login({ userId: result.user.user_id, email: result.user.email, name: result.user.name });
   
       setMessage("Inicio de sesión exitoso. Redirigiendo...");
       setTimeout(() => {

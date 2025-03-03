@@ -9,49 +9,75 @@ const Favorites: React.FC = () => {
   const { user } = useAuth();
   const [favorites, setFavorites] = useState([]);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     if (!user) return;
-
+  
     const fetchFavorites = async () => {
       try {
         console.log("🔍 Haciendo petición de favoritos...");
-        const response = await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites?userId=${user.userId}`);
+  
+        const token = localStorage.getItem("token");
+        if (!token) {
+          console.error("⚠ No hay token de autenticación");
+          return;
+        }
+  
+        const response = await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites`, {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+          }
+        });
+  
         if (!response.ok) throw new Error("❌ Error al obtener favoritos");
-
+  
         const data = await response.json();
         console.log("📌 Datos recibidos en favorites:", data);
-
+  
         setFavorites(data);
       } catch (err) {
         console.error("❌ Error en la petición:", err);
         setError(err.message);
       }
     };
-
+  
     fetchFavorites();
   }, [user]);
 
 
   const toggleFavorite = async (productId: number) => {
     if (!user) return;
-
-    try {
-      const response = await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites/${productId}?userId=${user.userId}`, {
-        method: "DELETE",
-      });
-
-      if (!response.ok) throw new Error("Error al eliminar de favoritos");
-
-      
-      setFavorites((prevFavorites) => prevFavorites.filter((fav) => fav.product_id !== productId));
-
-      console.log("✅ Producto eliminado de favoritos");
-    } catch (err) {
-      console.error("❌ Error eliminando favorito:", err);
+  
+    const token = localStorage.getItem("token");
+    if (!token) {
+      console.error("⚠ No hay token de autenticación");
+      return;
     }
+  
+    const isFavorite = favorites.some((fav) => fav.product_id === productId);
+  
+    if (isFavorite) {
+      try {
+        const response = await fetch(`https://garden-shop-backend-b3uo.onrender.com/favorites/${productId}`, {
+          method: "DELETE",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ userId: user.userId }) 
+        });
+  
+        if (!response.ok) throw new Error("Error al eliminar de favoritos");
+  
+     
+        setFavorites((prevFavorites) => prevFavorites.filter((fav) => fav.product_id !== productId));
+  
+        console.log("✅ Producto eliminado de favoritos");
+      } catch (err) {
+        console.error("❌ Error eliminando favorito:", err);
+      } }
   };
-
   return (
     <div className={styles.favorites_full_container}>
       {/* Información del usuario */}
@@ -64,12 +90,14 @@ const Favorites: React.FC = () => {
           className={styles.userAvatar}
         />
 
-        {favorites.length > 0 && (
-          <>
-            <h2 className={styles.firstname}>{favorites[0].users.first_name} {favorites[0].users.last_name}</h2>
-            <h3 className={styles.email}>{favorites[0].users.email}</h3>
-          </>
-        )}
+{favorites.length > 0 && favorites[0].users && (
+  <>
+    <h2 className={styles.firstname}>
+      {favorites[0].users.first_name} {favorites[0].users.last_name}
+    </h2>
+    <h3 className={styles.email}>{favorites[0].users.email}</h3>
+  </>
+)}
       </div>
 
       <div className={styles.grid}>
