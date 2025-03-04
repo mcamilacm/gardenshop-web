@@ -9,7 +9,7 @@
 {
     display: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1440px) {
        display:block ;
   position: relative;
   width: 50%;
@@ -62,7 +62,7 @@ text-align: center;
     width: 100%;
     
 
-    @media (min-width: 768px) {
+    @media (min-width: 1440px) {
         width: 50%;
         overflow: auto;
         
@@ -78,7 +78,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
     margin-top: 86px;
-    @media (min-width: 768px) {
+    @media (min-width: 1440px) {
 
         margin-top: 111 px;
 
@@ -99,7 +99,7 @@ height: 13.18px;
 margin-top:29.41px;
 margin-right:29.41px;
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
 
     width: 18.68px;
 height: 18.68px;
@@ -126,7 +126,18 @@ margin-right:31.66px;
 
 .form_items
 {
-    @media (min-width: 768px) {
+
+    @media (min-width: 744px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 192px;
+     
+        
+        
+            }
+
+    @media (min-width: 1440px) {
 display: flex;
 align-items: center;
 justify-content: center;
@@ -140,7 +151,7 @@ justify-content: center;
     padding-right: 33px;
     padding-left: 33px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1440px) {
 
     max-width: 360px;
     width: 100%;
