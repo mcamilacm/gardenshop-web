@@ -80,7 +80,7 @@ text-align: center;
     margin-top: 86px;
     @media (min-width: 1440px) {
 
-        margin-top: 111 px;
+        margin-top: 111px;
 
     }
 }
@@ -132,7 +132,7 @@ margin-right:31.66px;
         align-items: center;
         justify-content: center;
         padding-right: 192px;
-     
+        padding-left: 192px;
         
         
             }
