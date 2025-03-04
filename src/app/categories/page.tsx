@@ -7,7 +7,7 @@ const Categories = () => {
       <CategoryCardsHero
         title="De Plantas"
         subtitle="Paraíso"
-        imageUrl="/img/hero-gardener.svg"
+        imageUrl="/img/hero-gardener2.svg"
         altName="Planting Flowers"
       ></CategoryCardsHero>
       <ProductGrid />
