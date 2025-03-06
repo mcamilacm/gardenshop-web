@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 # 🌿 Garden Shop - E-commerce de Plantas
 
-**Garden Shop** es una aplicación web de e-commerce para la compra de plantas y accesorios de jardinería. Los usuarios pueden explorar productos, agregar favoritos y autenticarse para una experiencia personalizada.
+**Garden Shop** es una aplicación web de plantas y accesorios de jardinería. Los usuarios pueden explorar productos, agregar favoritos y autenticarse para una experiencia personalizada.
 
 🔗 **Frontend Deploy:** [Garden Shop Web](https://gardenshop-web.vercel.app/)  
 🔗 **Repositorio Backend:** [GitHub - Backend](https://github.com/mcamilacm/garden-shop-backend)  
@@ -14,7 +14,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ### **Frontend**
 - [Next.js](https://nextjs.org/) (React + SSR)
 - TypeScript
-- Tailwind CSS
 - [Vercel](https://vercel.com/) (Deploy)
 
 ### **Backend**
