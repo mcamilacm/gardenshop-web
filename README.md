@@ -1,6 +1,39 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🌿 Garden Shop - E-commerce de Plantas
+
+**Garden Shop** es una aplicación web de e-commerce para la compra de plantas y accesorios de jardinería. Los usuarios pueden explorar productos, agregar favoritos y autenticarse para una experiencia personalizada.
+
+🔗 **Frontend Deploy:** [Garden Shop Web](https://gardenshop-web.vercel.app/)  
+🔗 **Repositorio Backend:** [GitHub - Backend](https://github.com/mcamilacm/garden-shop-backend)  
+
+---
+
+## 🚀 Tecnologías Utilizadas
+
+### **Frontend**
+- [Next.js](https://nextjs.org/) (React + SSR)
+- TypeScript
+- Tailwind CSS
+- [Vercel](https://vercel.com/) (Deploy)
+
+### **Backend**
+- [Node.js](https://nodejs.org/) + [Express.js](https://expressjs.com/)
+- PostgreSQL + [Supabase](https://supabase.io/)
+- JWT (JSON Web Token) para autenticación
+- [Render](https://render.com/) (Deploy)
+
+---
+
+## 🛠️ Instalación y Configuración
+
+### **1️⃣ Clonar el repositorio**
+```bash
+git clone https://github.com/mcamilacm/garden-shop-web.git
+cd garden-shop-web
+
+
+
 
 First, run the development server:
 
