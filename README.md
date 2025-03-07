@@ -6,6 +6,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 🔗 **Frontend Deploy:** [Garden Shop Web](https://gardenshop-web.vercel.app/)  
 🔗 **Repositorio Backend:** [GitHub - Backend](https://github.com/mcamilacm/garden-shop-backend)  
+🔗 ** Video Explicativo** https://youtu.be/7ejbSvx64V4
+
 
 ---
 
